@@ -1,5 +1,21 @@
 # mephi-db
 
+Лабораторная работа по курсу «Базы данных» в НИЯУ МИФИ.
+
+Тема: GrowFood.
+
+Проект написан на [Python](https://www.python.org) и использует [SQLAlchemy](https://www.sqlalchemy.org) в качестве ORM для [PostgreSQL](https://www.postgresql.org).
+
+## Запуск
+
+Проект контейнеризирован. Чтобы запустить проект, убедитесь, что [Docker](https://www.docker.com) установлен на вашем компьютере.
+
+Для запуска необходимо выполнить команду внутри проекта:
+
+```bash
+docker-compose up --build
+```
+
 ## pgadmin
 
 Вы можете подключиться к `pgadmin` по адресу `http://localhost:5050`.
