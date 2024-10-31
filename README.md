@@ -18,7 +18,7 @@ docker-compose up --build
 
 ## pgadmin
 
-Вы можете подключиться к `pgadmin` по адресу `http://localhost:5050`.
+После запуска Вы можете подключиться к `pgadmin` по адресу http://localhost:5050.
 
 Данные для подключения к базе данных:
 
