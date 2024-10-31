@@ -4,6 +4,6 @@ WORKDIR /app
 
 RUN pip install SQLAlchemy psycopg psycopg-binary
 
-COPY . .
+COPY ./app .
 
 CMD [ "python", "./main.py" ]

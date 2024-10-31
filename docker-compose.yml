@@ -1,4 +1,4 @@
-version: '3.8'  # Обновите версию до актуальной
+version: '3.8' # Обновите версию до актуальной
 
 services:
   app:
@@ -11,8 +11,8 @@ services:
     develop:
       watch:
         - action: sync+restart
-          path: main.py
-          target: /app/main.py
+          path: ./app
+          target: /app
     environment:
       DSN: "postgresql+psycopg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}"
 
