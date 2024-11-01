@@ -6,6 +6,13 @@
 
 Проект написан на [Python](https://www.python.org) и использует [SQLAlchemy](https://www.sqlalchemy.org) в качестве ORM для [PostgreSQL](https://www.postgresql.org).
 
+<details>
+  <summary>ER-диаграмма</summary>
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/f9b7139a-fb85-4151-bff0-e80789edbc35 width=50%/>
+  </p>
+</details>
+
 ## Запуск
 
 Проект контейнеризирован. Чтобы запустить проект, убедитесь, что [Docker](https://www.docker.com) установлен на вашем компьютере.
