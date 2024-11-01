@@ -1,7 +1,3 @@
-from database import engine
-from sqlalchemy import text
+from core import create_tables
 
-with engine.connect() as conn:
-    res = conn.execute(text("SELECT VERSION()"))
-    print(f"{res.all()=}")
-
+create_tables()
