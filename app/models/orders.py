@@ -21,7 +21,7 @@ class Orders(Base):
         ForeignKey("menus.id", ondelete="SET NULL")
     )
     created_at: Mapped[datetime.datetime] = mapped_column(server_default=text("now()"))
-    status: Mapped[Status] = mapped_column(server_default=text("'new'"))
+    status: Mapped[Status] = mapped_column(server_default=text("'NEW'"))
     courier_id: Mapped[int | None] = mapped_column(
         ForeignKey("couriers.id", ondelete="SET NULL")
     )
