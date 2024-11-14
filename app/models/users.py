@@ -25,4 +25,4 @@ class Users(Base):
         ForeignKey("users.id", ondelete="SET NULL")
     )
     bonuses: Mapped[int] = mapped_column(server_default=text("0"))
-    adress: Mapped[str_100 | None]
+    address: Mapped[str_100 | None]
