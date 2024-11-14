@@ -8,4 +8,4 @@ def seed_all():
 
     seed_couriers(5)
     seed_menus()
-    seed_orders(25)
+    seed_orders(50, 30)
