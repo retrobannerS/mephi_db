@@ -4,13 +4,13 @@ from .preference_categories import *
 from .preferences_users import *
 from .payment_infos import *
 from .payment_methods import *
-from .ingridients import *
-from .ingridients_preferences import *
+from .ingredients import *
+from .ingredients_preferences import *
 from .orders import *
 from .couriers import *
 from .menus import *
 from .dishes import *
 from .dishes_menus import *
-from .dishes_ingridients import *
+from .dishes_ingredients import *
 from .suppliers import *
-from .ingridients_suppliers import *
+from .ingredients_suppliers import *
