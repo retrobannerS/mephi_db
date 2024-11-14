@@ -9,4 +9,5 @@ class Menus(Base):
     id: Mapped[intpk]
     title: Mapped[str_100]
     cost: Mapped[float]
+    count_dishes: Mapped[int]
     colorfulness: Mapped[float]
