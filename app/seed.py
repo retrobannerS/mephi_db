@@ -11,3 +11,4 @@ def seed_all():
     seed_orders(50, 30)
 
     seed_preference_categories()
+    seed_preferences()
