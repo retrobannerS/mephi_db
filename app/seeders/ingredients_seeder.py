@@ -5,7 +5,7 @@ import os
 
 
 def seed_ingredients():
-    file_path = os.path.join(os.path.dirname(__file__), "ingredients.csv")
+    file_path = os.path.join(os.path.dirname(__file__), "csv", "ingredients.csv")
     with open(file_path, "r") as file:
         reader = csv.DictReader(file)
         ingredients = []

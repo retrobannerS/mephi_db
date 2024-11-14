@@ -5,7 +5,7 @@ import os
 
 
 def seed_dishes():
-    file_path = os.path.join(os.path.dirname(__file__), "dishes.csv")
+    file_path = os.path.join(os.path.dirname(__file__), "csv", "dishes.csv")
     with open(file_path, "r") as file:
         reader = csv.DictReader(file)
         dishes = []

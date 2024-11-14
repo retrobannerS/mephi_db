@@ -19,3 +19,4 @@ def seed_all():
     seed_ingredients_suppliers()
     seed_dishes()
     seed_dishes_ingredients()
+    seed_ingredients_preferences()
