@@ -20,3 +20,4 @@ def seed_all():
     seed_dishes()
     seed_dishes_ingredients()
     seed_ingredients_preferences()
+    seed_dishes_menus()
