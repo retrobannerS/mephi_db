@@ -2,7 +2,7 @@ FROM python:alpine
 
 WORKDIR /app
 
-RUN pip install SQLAlchemy psycopg psycopg-binary
+RUN pip install SQLAlchemy psycopg psycopg-binary faker
 
 COPY ./app .
 
