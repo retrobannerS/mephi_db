@@ -6,11 +6,11 @@ from custom_types import intpk, str_100
 import enum
 
 class Status(enum.Enum):
-    NEW = "new"
-    IN_DELIVERY = "in_delivery"
-    DELIVERED = "delivered"
-    CANCELLED = "cancelled"
-    RETURNED = "returned"
+    new = "new"
+    in_delivery = "in_delivery"
+    delivered = "delivered"
+    cancelled = "cancelled"
+    returned = "returned"
 
 class Orders(Base):
     __tablename__ = "orders"
@@ -21,7 +21,7 @@ class Orders(Base):
         ForeignKey("menus.id", ondelete="SET NULL")
     )
     created_at: Mapped[datetime.datetime] = mapped_column(server_default=text("now()"))
-    status: Mapped[Status] = mapped_column(server_default=text("'NEW'"))
+    status: Mapped[Status] = mapped_column(server_default=text("'new'"))
     courier_id: Mapped[int | None] = mapped_column(
         ForeignKey("couriers.id", ondelete="SET NULL")
     )
