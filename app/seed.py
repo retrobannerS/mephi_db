@@ -13,3 +13,5 @@ def seed_all():
     seed_preference_categories()
     seed_preferences()
     seed_preferences_users()
+
+    seed_suppliers()
