@@ -4,7 +4,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from custom_types import intpk
 
 
-class Dishes_ingredients(Base):
+class Dishes_Ingredients(Base):
     __tablename__ = "dishes_ingredients"
 
     id: Mapped[intpk]

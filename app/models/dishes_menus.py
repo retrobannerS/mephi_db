@@ -5,7 +5,7 @@ from custom_types import intpk
 import datetime
 
 
-class Dishes_menus(Base):
+class Dishes_Menus(Base):
     __tablename__ = "dishes_menus"
 
     id: Mapped[intpk]

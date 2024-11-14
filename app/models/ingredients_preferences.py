@@ -4,7 +4,7 @@ from database import Base
 from custom_types import intpk
 
 
-class Ingredients_preferences(Base):
+class Ingredients_Preferences(Base):
     __tablename__ = "ingredients_preferences"
     id: Mapped[intpk]
     ingredient_id: Mapped[int] = mapped_column(
