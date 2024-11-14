@@ -46,7 +46,7 @@ def seed_users(n=50):
             sex=sex,
             birth_date=generate_birth_date(),
             phone_number=generate_phone_number(),
-            address=None,
+            address=fake.street_address() if random.random() < 0.3 else None,
             bonuses=0,
         )
         users.append(user)

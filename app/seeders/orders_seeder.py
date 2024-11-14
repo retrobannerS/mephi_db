@@ -68,6 +68,7 @@ def seed_orders(n=100, duration=30):
         )
 
         user.bonuses += menu.cost * 0.05
+        user.address = fake.street_address()
 
         orders.append(order)
 
