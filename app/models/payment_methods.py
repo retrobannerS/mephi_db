@@ -6,4 +6,5 @@ class Payment_Methods(Base):
     __tablename__ = "payment_methods"
     id: Mapped[intpk]
     title: Mapped[str_100]
+    require_requisites: Mapped[bool]
     
