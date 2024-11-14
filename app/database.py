@@ -5,7 +5,8 @@ from custom_types import phone_number, str_100
 
 engine = create_engine(url=os.getenv("DSN"), echo=True)
 
-session = sessionmaker(engine)
+Session = sessionmaker(engine)
+session = Session()
 
 class Base(DeclarativeBase):
     type_annotation_map = {phone_number: String(10), str_100: String(100)}
