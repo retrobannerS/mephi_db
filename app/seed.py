@@ -14,5 +14,6 @@ def seed_all():
     seed_preferences()
     seed_preferences_users()
 
-    seed_suppliers()
+    seed_suppliers(10)
     seed_ingredients()
+    seed_ingredients_suppliers()
