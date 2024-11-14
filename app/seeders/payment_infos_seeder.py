@@ -11,14 +11,13 @@ def seed_payment_infos():
     
     payment_infos = []
     for user in users:
-        payment_method = random.choice(payment_methods)
-        
-        payment_info = models.Payment_infos(
-            user_id=user.id,
-            payment_method_id=payment_method.id if random.random() > 0.3 else None,
-            requisites=fake.credit_card_number() if payment_method.require_requisites else None
-        )
-        payment_infos.append(payment_info)
+        for payment_method in payment_methods:
+            payment_info = models.Payment_infos(
+                user_id=user.id,
+                payment_method_id=payment_method.id if random.random() < 0.5 else None,
+                requisites=fake.credit_card_number() if payment_method.require_requisites else None
+            )
+            payment_infos.append(payment_info)
     
     session.bulk_save_objects(payment_infos)
     session.commit()
