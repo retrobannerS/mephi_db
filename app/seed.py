@@ -9,3 +9,5 @@ def seed_all():
     seed_couriers(5)
     seed_menus()
     seed_orders(50, 30)
+
+    seed_preference_categories()
