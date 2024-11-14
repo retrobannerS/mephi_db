@@ -11,6 +11,6 @@ class Payment_infos(Base):
         ForeignKey("users.id", ondelete="CASCADE")
     )
     payment_method_id: Mapped[int | None] = mapped_column(
-        ForeignKey("payment_methods.id", ondelete="CASCADE")
+        ForeignKey("payment_methods.id", ondelete="CASCADE", server_default="0")
     )
     requisites: Mapped[str] = mapped_column(nullable=True)
