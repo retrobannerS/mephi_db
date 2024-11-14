@@ -7,7 +7,7 @@ fake = Faker("ru_RU")
 
 def seed_payment_infos():
     users = session.query(models.Users).all()
-    payment_methods = session.query(models.Payment_Methods).all()
+    payment_methods = session.query(models.Payment_methods).all()
     
     payment_infos = []
     for user in users:
