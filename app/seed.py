@@ -15,3 +15,4 @@ def seed_all():
     seed_preferences_users()
 
     seed_suppliers()
+    seed_ingredients()

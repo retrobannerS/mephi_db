@@ -4,13 +4,13 @@ from .preference_categories_seeder import *
 from .preferences_users_seeder import *
 from .payment_infos_seeder import *
 from .payment_methods_seeder import *
-from .ingridients_seeder import *
-from .ingridients_preferences_seeder import *
+from .ingredients_seeder import *
+from .ingredients_preferences_seeder import *
 from .orders_seeder import *
 from .couriers_seeder import *
 from .menus_seeder import *
 from .dishes_seeder import *
 from .dishes_menus_seeder import *
-from .dishes_ingridients_seeder import *
+from .dishes_ingredients_seeder import *
 from .suppliers_seeder import *
-from .ingridients_suppliers_seeder import *
+from .ingredients_suppliers_seeder import *
