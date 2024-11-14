@@ -7,3 +7,4 @@ def seed_all():
     seed_payment_infos()
 
     seed_couriers(5)
+    seed_menus()
