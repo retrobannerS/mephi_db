@@ -10,16 +10,22 @@ def seed_dishes_menus():
 
     # Получаем все меню
     menus = session.query(Menus).all()
-    dishes = session.query(Dishes).all()
     values = []
     for date in date_range:
         for menu in menus:
             selected_dishes = []
             colorfulness_accumulated = 0
-
             # Пока не выбрано нужное количество блюд для меню
             while len(selected_dishes) < menu.count_dishes:
                 # Выбираем случайное блюдо
+                dishes = (
+                    session.query(Dishes)
+                    .where(
+                        Dishes.colorfulness
+                        <= menu.colorfulness - colorfulness_accumulated
+                    )
+                    .all()
+                )
                 dish = random.choice(dishes)
 
                 # Проверяем, укладывается ли блюдо в параметры меню
@@ -29,10 +35,7 @@ def seed_dishes_menus():
 
             # Добавляем выбранные блюда в dishes_menus
             for dish in selected_dishes:
-                value = Dishes_Menus(
-                    dish_id=dish.id, menu_id=menu.id, date=date
-                )
+                value = Dishes_Menus(dish_id=dish.id, menu_id=menu.id, date=date)
                 values.append(value)
-
     session.bulk_save_objects(values)
     session.commit()
