@@ -6,7 +6,7 @@
 
 После проведения анализа предметной области была спроектирована следующая концептуальная модель:
 
-![Концептуальная модель базы данных](assets/images/1.png)
+![Концептуальная модель базы данных](../assets/images/1.png)
 
 ## Конкретизация предметной области
 
@@ -54,7 +54,7 @@
 Следующим шагом на основе КМПО была разработана логическая модель базы
 данных, представленная ниже:
 
-![Логическая модель базы данных](assets/images/2.png)
+![Логическая модель базы данных](../assets/images/2.png)
 
 Для соблюдения третьей нормальной формы информация об оплате и категории предпочтений были вынесены в отдельные таблицы. Также отмечены связи "один ко многим".
 
@@ -68,7 +68,7 @@
 PostgreSQL. В связи с проведённым анализом предметной области была проработана
 следующая физическая схема БД. Она представлена на следующем рисунке:
 
-![Графическое представление базы данных](assets/images/3.png)
+![Графическое представление базы данных](../assets/images/3.png)
 
 ## Создание таблиц
 
@@ -744,35 +744,35 @@ def seed_ingredients_preferences():
 
 После выполнения всех функций заполнения базы данных были получены следующие результаты:
 
-![Таблица "users"](assets/images/users.png)
+![Таблица "users"](../assets/images/users.png)
 
-![Таблица "payment_methods"](assets/images/payment_methods.png)
+![Таблица "payment_methods"](../assets/images/payment_methods.png)
 
-![Таблица "payment_infos"](assets/images/payment_infos.png)
+![Таблица "payment_infos"](../assets/images/payment_infos.png)
 
-![Таблица "preference_categories"](assets/images/preference_categories.png)
+![Таблица "preference_categories"](../assets/images/preference_categories.png)
 
-![Таблица "preferences"](assets/images/preferences.png)
+![Таблица "preferences"](../assets/images/preferences.png)
 
-![Таблица "couriers"](assets/images/couriers.png)
+![Таблица "couriers"](../assets/images/couriers.png)
 
-![Таблица "menus"](assets/images/menus.png)
+![Таблица "menus"](../assets/images/menus.png)
 
-![Таблица "orders"](assets/images/orders.png)
+![Таблица "orders"](../assets/images/orders.png)
 
-![Таблица "dishes"](assets/images/dishes.png)
+![Таблица "dishes"](../assets/images/dishes.png)
 
-![Таблица "dishes_menus"](assets/images/dishes_menus.png)
+![Таблица "dishes_menus"](../assets/images/dishes_menus.png)
 
-![Таблица "ingredients"](assets/images/ingredients.png)
+![Таблица "ingredients"](../assets/images/ingredients.png)
 
-![Таблица "dishes_ingredients"](assets/images/dishes_ingredients.png)
+![Таблица "dishes_ingredients"](../assets/images/dishes_ingredients.png)
 
-![Таблица "suppliers"](assets/images/suppliers.png)
+![Таблица "suppliers"](../assets/images/suppliers.png)
 
-![Таблица "ingredients_suppliers"](assets/images/ingredients_suppliers.png)
+![Таблица "ingredients_suppliers"](../assets/images/ingredients_suppliers.png)
 
-![Таблица "ingredients_preferences"](assets/images/ingredients_preferences.png)
+![Таблица "ingredients_preferences"](../assets/images/ingredients_preferences.png)
 
 # Выполнение запросов
 
@@ -798,7 +798,7 @@ FROM
     INNER JOIN menus AS m on o.menu_id = m.id
 ```
 
-![Результат выполнения запроса 1](assets/images/q_1.png)
+![Результат выполнения запроса 1](../assets/images/q_1.png)
 
 2. Какая доля (в `%`) общей выручки приходится на меню с названием «Похудение»? Проценты округлить до двух знаков после запятой.
 
@@ -812,7 +812,7 @@ FROM
     INNER JOIN menus AS m on o.menu_id = m.id
 ```
 
-![Результат выполнения запроса 2](assets/images/q_2.png)
+![Результат выполнения запроса 2](../assets/images/q_2.png)
 
 3. Вычислить НДС каждого меню и рассчитать цену каждого меню не включая НДС. Вывести название меню, его текущую цену, НДС и цену без НДС. Значения округлить до двух знаков после запятой.
 
@@ -826,7 +826,7 @@ FROM
     menus
 ```
 
-![Результат выполнения запроса 3](assets/images/q_3.png)
+![Результат выполнения запроса 3](../assets/images/q_3.png)
 
 4. Найти заказы, которые оказались возвращены и были оплачены с помощью «Яндекс.Сплит». Вывести `id` заказа, дату заказа и реквизиты платежа.
 
@@ -853,7 +853,7 @@ WHERE
     o.status = 'returned'
 ```
 
-![Результат выполнения запроса 4](assets/images/q_4.png)
+![Результат выполнения запроса 4](../assets/images/q_4.png)
 
 5. Найти топ-5 пользователей по количеству бонусов, которые большинство своих заказов оплатили наличными курьеру. Вывести `id` пользователя, его имя и количество бонусов.
 
@@ -912,7 +912,7 @@ LIMIT
     5;
 ```
 
-![Результат выполнения запроса 5](assets/images/q_5.png)
+![Результат выполнения запроса 5](../assets/images/q_5.png)
 
 6. Найти блюда, содержащие хотя бы один ингредиент, который относится к самой популярной категории предпочтений. Вывести только названия блюд, отсортированные в алфавитном порядке.
 
@@ -964,7 +964,7 @@ ORDER BY
     d.title;
 ```
 
-![Результат выполнения запроса 6](assets/images/q_6.png)
+![Результат выполнения запроса 6](../assets/images/q_6.png)
 
 7. Вывести 2 строки с названием меню, массивом входящих в него блюд и даты, которые принесут больше всего прибыли (численно и в % относительно себестоимости).
 
@@ -1051,7 +1051,7 @@ WITH
 SELECT * FROM max_profit UNION ALL SELECT * FROM max_profit_percent;
 ```
 
-![Результат выполнения запроса 7](assets/images/q_7.png)
+![Результат выполнения запроса 7](../assets/images/q_7.png)
 
 8. Какие пары блюд находятся вместе в меню чаще всего? Вывести их названия и количество нахождений вместе.
 
@@ -1082,7 +1082,7 @@ FROM
     JOIN dishes d2 ON pair[2] = d2.id
 ```
 
-![Результат выполнения запроса 8](assets/images/q_8.png)
+![Результат выполнения запроса 8](../assets/images/q_8.png)
 
 9.  Найти медианное количество заказов у пользователей.
     
@@ -1126,7 +1126,7 @@ WHERE
     row_number BETWEEN total_rows / 2.0 AND total_rows  / 2.0 + 1
 ```
 
-![Результат выполнения запроса 9](assets/images/q_9.png)
+![Результат выполнения запроса 9](../assets/images/q_9.png)
 
 10. Рассчитать ежедневную выручку сервиса, рассчитать ежедневный прирост выручки (численно и в %) относительно предыдущего дня.
     
@@ -1154,7 +1154,7 @@ FROM
     main_table
 ```
 
-![Результат выполнения запроса 10](assets/images/q_10.png)
+![Результат выполнения запроса 10](../assets/images/q_10.png)
 
 11. Построить иерархию приглашенных и пригласивших пользователей.
 
@@ -1188,7 +1188,7 @@ FROM
 
 ```
 
-![Результат выполнения запроса 11](assets/images/q_11.png)
+![Результат выполнения запроса 11](../assets/images/q_11.png)
 
 12. Пусть сегодня 1 число какого-то месяца. У нас есть список заказов за предыдущий месяц. В предположении, что количество заказов на каждую позицию в меню останется таким же, вывести список ингредиентов, для которых следует нанять ещё поставщиков (которых не хватит для изготовления нужных блюд на ближайший месяц). Рассчитывать со следующим допущением: если блюдо весит $a$ грамм и для его изготовления нужно $n$ ингредиентов, то каждого ингредиента нужно в количестве $\frac{a}{n}$ грамм.
 
@@ -1259,5 +1259,5 @@ ORDER BY
     ingredient_id
 ```
 
-![Результат выполнения запроса 12](assets/images/q_12.png)
+![Результат выполнения запроса 12](../assets/images/q_12.png)
 
